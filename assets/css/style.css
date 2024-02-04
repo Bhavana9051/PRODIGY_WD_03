@@ -1,0 +1,94 @@
+body {
+    background: linear-gradient(to right, #b72427, #0e0a42, #fc4d84, #00008B);
+    background-size: 400% 100%;
+    animation: gradientAnimation 10s infinite alternate;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 100%;
+    }
+}
+
+.instruct{
+    margin-top: 20px;
+    margin-right: 20px;
+    border-color: #0e0a42 solid;
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: #1c8b00;
+}
+.instruct:hover{
+    background-color: none !important;
+    outline: #41e81b;
+    color: #41e81b;
+}
+
+.modal-content{
+    background-color: #b43960;
+    color: white;
+}
+
+.title{
+    color: rgb(98, 172, 199);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-transform: capitalize 0.2s;
+    margin-bottom: 30px;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 5px;
+    justify-content: center;
+}
+
+.cell {
+    background-color: #41e81b;
+    width: 100px;
+    height: 100px;
+    font-size: 2em;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.cell:hover {
+    background-color: rgb(104, 60, 236);
+}
+
+.result{
+    color: antiquewhite;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.restart{
+    display: flex;
+    justify-content: center;
+}
+
+/* Add this CSS for sparkles effect */
+@keyframes sparklesAnimation {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+.sparkles {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    animation: sparklesAnimation 1.5s linear infinite;
+}
+
